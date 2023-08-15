@@ -1,0 +1,15 @@
+---
+title: Retrieve card
+openapi: get /card/{cardId}
+---
+
+To reveal the full PAN or CVV of the card, you must:
+1. Set the query params `include_pan=true` and/or `include_cvv=true`.
+2. Set the base URL of the request to `https://vault.joinslash.com`.
+
+
+```bash
+curl --request GET \
+  --url "https://vault.joinslash.com/card/<cardId>?include_pan=true&include_cvv=true" \
+  --header 'X-API-Key: <x-api-key>'
+```
